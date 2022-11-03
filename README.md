@@ -1,2 +1,6 @@
 # CognitoAuthentication
-API authentication using AWS Cognito
+This code snippet makes use of [AWS's Cognito service](https://aws.amazon.com/cognito/) to authenticate API requests. It is configured to store an ID token and is replaced when it expires so that your application can make minimal calls to Cognito to stay within the [free tier](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all&all-free-tier.q=cognito&all-free-tier.q_operator=AND). You will come accross the token expiry settings when setting up Cognito within the AWS console:
+- [Create user pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-as-user-directory.html)
+- [Create a user (account status must be 'CONFIRMED' before use)](https://docs.aws.amazon.com/cognito/latest/developerguide/how-to-create-user-accounts.html)
+- [Add an app client](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-configuring-app-integration.html)
+- [Integrate a REST API with an Amazon Cognito user pool](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-enable-cognito-user-pool.html)
